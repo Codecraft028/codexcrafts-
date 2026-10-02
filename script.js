@@ -1,3 +1,5 @@
+try{var t=localStorage.getItem("cc-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}
+
 (function(){
   var st=document.querySelector('#why .stage');if(!st)return;
   var nodes=st.querySelectorAll('.node'),pinned=null;
@@ -214,25 +216,26 @@ window.addEventListener('scroll',function(){up.classList.toggle('show',window.sc
     'Branding & Identity':'Branding & Identity',
     'Digital Marketing':'Digital Marketing',
     'Graphic Design':'Graphic Design',
+    'Motion Design':'Motion Design',
     'Video Editing':'Video Editing',
     'Social Media Management':'Social Media Management',
     'Hosting & Deployment':'Hosting & Deployment'
   };
 
-  // Indicative bands intentionally reuse the site's existing budget tiers.
-  // Final pricing remains dependent on pages, features and integrations.
+  // Starting prices per service. Final pricing depends on pages, features and integrations.
   var priceMap={
-    'Website':'₹15,000 – ₹35,000+',
-    'Mobile apps':'₹35,000 – ₹1,00,000+',
-    'UI/UX design':'Under ₹15,000 – ₹35,000+',
-    'Custom software':'₹1,00,000+ / custom quote',
-    'AI chatbots and automation':'₹35,000 – ₹1,00,000+',
-    'Branding & Identity':'Under ₹15,000 – ₹35,000+',
-    'Digital Marketing':'₹15,000 – ₹35,000+',
-    'Graphic Design':'Under ₹15,000 – ₹35,000+',
-    'Video Editing':'Under ₹15,000 – ₹35,000+',
-    'Social Media Management':'₹15,000 – ₹35,000+',
-    'Hosting & Deployment':'Under ₹15,000 – ₹35,000+'
+    'Website':'Starting ₹5,999+',
+    'Mobile apps':'Starting ₹13,999+',
+    'UI/UX design':'Starting ₹3,999+',
+    'Custom software':'Starting ₹15,999+',
+    'AI chatbots and automation':'Starting ₹5,999+',
+    'Branding & Identity':'Starting ₹3,999+',
+    'Digital Marketing':'Starting ₹3,999+ / month',
+    'Graphic Design':'Starting ₹499+ / design',
+    'Motion Design':'Starting ₹599+ / design',
+    'Video Editing':'Starting ₹799+ / video',
+    'Social Media Management':'Starting ₹2,999+ / month',
+    'Hosting & Deployment':'Starting ₹1,499+'
   };
   function updateSelectionPreview(service){
     var isBuilder=!!builderMap[service];
